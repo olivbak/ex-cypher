@@ -12,7 +12,11 @@ defmodule ExCypher.Clause do
     :pipe_with,
     :order,
     :limit,
-    :set
+    :set,
+    :delete,
+    :optional_match,
+    :merge,
+    :escape
   ]
 
   defguard is_supported(command_name)

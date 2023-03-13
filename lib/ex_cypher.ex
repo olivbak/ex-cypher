@@ -331,6 +331,7 @@ defmodule ExCypher do
       unquote(query)
       |> Enum.reverse()
       |> List.flatten()
+      |> Enum.filter(fn x -> x != "" end)
       |> Enum.join(" ")
       |> String.replace(" , ", ", ")
     end
